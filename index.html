@@ -4,12 +4,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detección de Colisiones - Canvas</title>
+
+    <title>Collision Lab | Simulador 2D</title>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <canvas id="canvas"></canvas>
+    <div class="app-container">
+
+        <header class="header">
+            <div class="brand">
+                <span class="brand-icon">◈</span>
+                <div>
+                    <h1>COLLISION <span>LAB</span></h1>
+                    <p>PHYSICS ENGINE // 2D SIMULATION</p>
+                </div>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                <span id="statusText">SYSTEM ONLINE</span>
+            </div>
+        </header>
+
+        <main class="dashboard">
+
+            <section class="simulation-panel">
+                <div class="panel-header">
+                    <div>
+                        <h2>SIMULATION ARENA</h2>
+                        <p>Detección de colisiones en tiempo real</p>
+                    </div>
+
+                    <span class="live-badge">● LIVE</span>
+                </div>
+
+                <div class="canvas-container">
+                    <canvas id="canvas"></canvas>
+
+                    <div class="canvas-label">
+                        COLLISION ENGINE V3.0
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="pauseBtn">
+                        ⏸ PAUSAR
+                    </button>
+
+                    <button id="resetBtn">
+                        ↻ REINICIAR
+                    </button>
+                </div>
+            </section>
+
+            <aside class="sidebar">
+
+                <div class="stat-card">
+                    <p>CÍRCULOS ACTIVOS</p>
+                    <h2 id="circleCount">20</h2>
+                    <span>Objetos en simulación</span>
+                </div>
+
+                <div class="stat-card">
+                    <p>COLISIONES DETECTADAS</p>
+                    <h2 id="collisionCount">0</h2>
+                    <span>Impactos registrados</span>
+                </div>
+
+                <div class="stat-card">
+                    <p>ESTADO DEL SISTEMA</p>
+                    <h2 class="online" id="systemState">
+                        ACTIVE
+                    </h2>
+                    <span>Motor de simulación</span>
+                </div>
+
+                <div class="info-card">
+                    <h3>⚡ PHYSICS ENGINE</h3>
+
+                    <div class="info-row">
+                        <span>Objetos</span>
+                        <strong>20</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Velocidad inicial</span>
+                        <strong>1 - 5</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Detección</span>
+                        <strong>2D</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Rebotes</span>
+                        <strong>ON</strong>
+                    </div>
+                </div>
+
+            </aside>
+
+        </main>
+
+        <footer>
+            <p>
+                COLLISION LAB © 2026 |
+                Ingeniería en Sistemas Computacionales
+            </p>
+        </footer>
+
+    </div>
 
     <script src="colision.js"></script>
 </body>
